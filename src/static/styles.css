@@ -669,6 +669,139 @@ footer {
   background-color: #4caf50;
   color: white;
   text-align: center;
-  padding: 15px;
+  padding: 12px 40px 12px 15px;
   font-weight: bold;
+  position: relative;
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+.announcement-banner .close-banner {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-weight: normal;
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+.announcement-banner .close-banner:hover {
+  opacity: 1;
+}
+
+/* Announcements management */
+.announcement-icon {
+  font-size: 1rem;
+}
+
+.announcements-modal-content {
+  max-width: 520px;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.announcement-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.announcement-form-actions .cancel-btn {
+  background-color: #f1f1f1;
+  color: var(--text-primary);
+}
+
+.announcements-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 18px 0;
+}
+
+#announcements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.announcement-item {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.announcement-item.expired {
+  opacity: 0.6;
+  background-color: var(--border-light);
+}
+
+.announcement-item-message {
+  font-weight: 500;
+  margin-bottom: 4px;
+  word-break: break-word;
+}
+
+.announcement-item-dates {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.announcement-item-status {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-left: 6px;
+}
+
+.announcement-item-status.active {
+  background-color: var(--success-light);
+  color: var(--success);
+}
+
+.announcement-item-status.scheduled {
+  background-color: var(--info-light);
+  color: var(--info);
+}
+
+.announcement-item-status.expired {
+  background-color: var(--error-light);
+  color: var(--error);
+}
+
+.announcement-item-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.announcement-item-actions button {
+  font-size: 0.8rem;
+  padding: 4px 10px;
+}
+
+.announcement-edit-btn {
+  background-color: var(--primary-light);
+  color: white;
+}
+
+.announcement-delete-btn {
+  background-color: var(--error);
+  color: white;
 }
